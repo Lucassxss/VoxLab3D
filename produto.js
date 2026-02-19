@@ -36,7 +36,12 @@ const produtos = {
     "suporte-controle1": {nome:"Suporte de Controle", preco:27.90, imagem:"img/suporte1.jpg", descricao:"Suporte prático para controles."},
     "suporte-controle2": {nome:"Suporte de Controle", preco:26.90, imagem:"img/suporte2.jpg", descricao:"Suporte prático para controles."},
     "suporte-celular": {nome:"Suporte para Celular", preco:8, imagem:"img/suporteCelular.jpg", descricao:"Suporte para celular em 3D."},
-    "suporte-toalhas": {nome:"Suporte para Toalhas", preco:17.90, imagem:"img/suporteToalha.jpg", descricao:"Suporte para toalhas impresso em 3D."}
+    "suporte-toalhas": {nome:"Suporte para Toalhas", preco:17.90, imagem:"img/suporteToalha.jpg", descricao:"Suporte para toalhas impresso em 3D."},
+
+    // ===== ADICIONADOS =====
+    "placa-qrcode-pix": {nome:"Placa QRCode Pix", preco:15.90, imagem:"img/qrcodePix.jpg", descricao:"Placa personalizada com QRCode Pix ideal para comércios."},
+    "letreiro-empresa": {nome:"Letreiro Empresa", preco:49.90, imagem:"img/letreiroEmpresa.jpg", descricao:"Letreiro 3D personalizado com nome ou logo."},
+    "dino-surpresa": {nome:"Dino Surpresa", preco:14.90, imagem:"img/dinoSurpresa.jpg", descricao:"Ovo surpresa com dinossauro articulado dentro."}
 };
 
 // ===== VARIÁVEIS =====
@@ -63,7 +68,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document.getElementById("descricao-produto").textContent =
         PRODUTO_ATUAL.descricao;
 
-    // Atualiza total ao mudar quantidade
     document.getElementById("quantidade").addEventListener("input", atualizarTotal);
 
     atualizarTotal();
@@ -97,11 +101,9 @@ async function calcularFrete() {
     const endereco = await buscarCEP(cep);
     if (!endereco) return;
 
-    // Exibir endereço
     document.getElementById("endereco-info").textContent =
         `${endereco.localidade}, ${endereco.uf}`;
 
-    // Calcular frete baseado no estado
     if (endereco.uf === 'SP') {
         frete = endereco.localidade === 'São Paulo' ? 10 : 15;
     } else {
