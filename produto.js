@@ -145,4 +145,3 @@ Aguardo retorno 🙂`;
         "_blank"
     );
 }
-
