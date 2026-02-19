@@ -39,7 +39,7 @@ const produtos = {
     "suporte-toalhas": {nome:"Suporte para Toalhas", preco:17.90, imagem:"img/suporteToalha.jpg", descricao:"Suporte para toalhas impresso em 3D."},
 
     // ===== ADICIONADOS =====
-    "placa-qrcode-pix": {nome:"Placa QRCode Pix", preco:15.90, imagem:"img/qrcodepix.jpg", descricao:"Placa personalizada com QRCode Pix ideal para comércios."},
+    "qrcode-pix": {nome:"Placa QRCode Pix", preco:15.90, imagem:"img/teste2.jpg", descricao:"Placa personalizada com QRCode Pix ideal para comércios."},
     "letreiro-empresa": {nome:"Letreiro Empresa", preco:49.90, imagem:"img/LetreiroEmpresa.jpg", descricao:"Letreiro 3D personalizado com nome ou logo."},
     "dino-surpresa": {nome:"Dino Surpresa", preco:14.90, imagem:"img/dino.jpg", descricao:"Ovo surpresa com dinossauro articulado dentro."}
 };
@@ -145,4 +145,3 @@ Aguardo retorno 🙂`;
         "_blank"
     );
 }
-
